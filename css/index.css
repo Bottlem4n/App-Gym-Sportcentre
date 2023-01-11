@@ -1,0 +1,378 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+}
+
+header nav{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+}
+
+header nav .menu{
+    width: 250px;
+    height: auto;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .menu a{
+    background-color: #434343;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: #E9E5E6;
+    font-size: 1.5rem;
+    padding: 7.5px;
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+hr{
+    margin: 2rem 0;
+    color: inherit;
+    background-color: currentColor;
+    opacity: .25;
+}
+
+
+.btn{
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    padding: .375rem;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    margin: 0 .5rem;
+}
+
+.btn-primary{
+    color: #fff;
+    background-color: #0577D3;
+    border-color: #1A95F9;
+}
+
+
+
+.btn-info{
+    color: #FDFFFC;
+    background-color: #13A995;
+    border-color: #13A995;
+    text-align: center;
+}
+
+.btn-danger{
+    color: #FEFFFE;
+    background-color: #E40826;
+    border-color: #E40826;
+    text-align: center;
+}
+
+.btn-dark{
+    color: #fff;
+    background-color: #212529;
+    border-color: #212529;
+}
+
+.btn-success{
+    color: #fff;
+    background-color: #36B927;
+    border-color: #36B927;
+}
+
+.btn-sm{
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    font-size: 1.6rem;
+    border-radius: .2rem;
+    font-weight: 700;
+}
+
+.btn-md{
+    width: 100px;
+    height: 25px;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.btn-gde{
+    width: 150px;
+    height: 50px;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.container{
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-left: auto;
+    margin-right: auto
+}
+
+table{
+    display: table;
+    text-indent: initial;
+    border-spacing: 2px;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    color: #212529;
+    vertical-align: top;
+    border-color: #dee2e6;
+    caption-side: bottom;
+    border-collapse: collapse;
+}
+
+table > thead {
+    vertical-align: bottom;
+    display: table-header-group;
+}
+
+tbody,td,tfoot,th,thead,tr{
+    border-bottom: 1px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: #212529;
+    border-style: solid;
+    text-align: center;
+    padding: 1rem;
+}
+
+.col{
+    flex: 0;
+}
+
+
+.catalogo{
+    display: flex;
+}
+
+.col-md-4{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.mb-2{
+    margin: 5px;
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+}
+
+.card-body{
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+}
+
+.card img{
+    width: auto;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card h4{
+    font-weight: 600;
+    font-size: 2rem;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.card p{
+    font-size: 1.2rem;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+
+.modal-container{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    width: 40%;
+    height: 40%;
+    background: #FEF9EF;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    border-radius: 5%;
+
+}
+
+.modal > img {
+    height: 50%;
+    margin: 0 auto;
+}
+
+
+.imagen-producto{
+    width: auto;
+    height: 100px;
+    object-fit: cover;
+}
+
+.celda{
+    height: auto;
+    width: 200px;
+}
+
+.celda button{
+    margin: 10px;
+}
+
+
+.modal-container-agregar{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-agregar{
+    width: 50%;
+    height: 70%;
+    background: #FEF9EF;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    border-radius: 5%;
+
+}
+
+
+.modal-agregar label{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.modal-agregar input:not(input[type="file"]){
+    width: 60%;
+    font-size: 2rem;
+    border: 1spx inset #21252911;
+    border-radius: 10px;
+}
+
+.modal-agregar input[type="number"]{
+    text-align: right;
+}
+
+.modal-container-editar{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-editar{
+    width: 50%;
+    height: 70%;
+    background: #FEF9EF;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    border-radius: 5%;
+
+}
+
+.modal-editar label{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.modal-editar input {
+    width: 60%;
+    font-size: 2rem;
+    border: 1spx inset #21252911;
+    border-radius: 10px;
+}
+
+#claveProducto{
+    width: 60%;
+    font-size: 2rem;
+    border: 1spx inset #21252911;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-editar input[type="number"]{
+    text-align: right;
+}
